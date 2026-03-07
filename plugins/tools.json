@@ -1,0 +1,17 @@
+[
+    "tools/jsonFormatter.js",
+    "tools/base64Tool.js",
+    "tools/uuidTool.js",
+    "tools/urlTool.js",
+    "tools/regexTool.js",
+    "tools/timestampConverter.js",
+    "tools/htmlEntities.js",
+    "tools/passwordGenerator.js",
+    "tools/apiTester.js",
+    "tools/caseConverter.js",
+    "tools/jwtDecoder.js",
+    "tools/hashTool.js",
+    "tools/colorTool.js",
+    "tools/loremIpsum.js",
+    "tools/webTools.js"
+]

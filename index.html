@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="QuickDevTools">
+    <title>QuickDevTools v2</title>
+
+    <!-- PWA Manifest (Solid Icon Style) -->
+    <link rel="manifest"
+        href="data:application/json;base64,ewogICJuYW1lIjogIkRldlRvb2xzIEh1YiBQcm8iLAogICJzaG9ydF9uYW1lIjogIkRldlRvb2xzIiwKICAiZGVzY3JpcHRpb24iOiAiQSBjb21wcmVoZW5zaXZlIGRldmVsb3BlciB0b29scyBodWIiLAogICJzdGFydF91cmwiOiAiLiIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzBmMTcyYSIsCiAgInRoZW1lX2NvbG9yIjogIiMzYjgyZjYiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWwlM0NzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgNTEyIDUxMiclM0VwYXRoIGZpbGw9JyUyMzNiODJmNiJkPSdNMjU2IDBDMTE0LjYgMCAwIDExNC42IDAgMjU2czExNC42IDI1NiAyNTYgMjU2IDI1Ni0xMTQuNiAyNTYtMjU2UzM5Ny40IDAgMjU2IDB6bTAgNDU2Yy0xMTAuNSAwLTIwMC04OS41LTIwMC0yMDBTMTQ1LjUgNTYgMjU2IDU2czIwMCA4OS41IDIwMCAyMDAtODkuNSAyMDAtMjAwIDIwMHptMC0zNDBjLTc3LjIgMC0xNDAgNjIuOC0xNDAgMTQwaDI4MGMwLTc3LjItNjIuOC0xNDAtMTQwLTE0MHonLyUzRSUzQy9zdmclM0UiLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9CiAgXQp9">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- App Entry Point -->
+    <script type="module" src="js/app.js"></script>
+</head>
+
+<body>
+
+    <!-- PWA Install Banner -->
+    <div class="pwa-banner" id="pwaBanner">
+        <p>Install QuickDevTools for the best experience</p>
+        <button class="pwa-btn" id="pwaInstallBtn">Install App</button>
+        <button style="background:none; border:none; color:white; margin-left:10px; cursor:pointer;"
+            id="pwaBannerClose"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="brand">
+            <div class="brand-icon"><i class="fas fa-terminal"></i></div>
+            <div class="brand-text">
+                <h1>QuickDevTools</h1>
+                <span>Power Tools for Devs</span>
+            </div>
+        </div>
+
+        <div class="header-search">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-input" id="globalSearch" placeholder="Search tools or Ctrl+K...">
+            <span class="cmd-hint">Ctrl+K</span>
+        </div>
+
+        <div class="header-actions">
+            <button class="btn btn-secondary" id="btn-cmd-palette" title="Command Palette">
+                <i class="fas fa-keyboard"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sidebar (Desktop) -->
+    <aside class="sidebar">
+        <div class="side-nav-group">
+            <div class="side-nav-label">Main</div>
+            <a href="#" class="side-link active" data-target="tab-home">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="side-link" data-target="tab-favorites">
+                <i class="fas fa-star"></i>
+                <span>Favorites</span>
+            </a>
+        </div>
+
+        <div class="side-nav-group">
+            <div class="side-nav-label">Categories</div>
+            <a href="#" class="side-link cat-filter" data-filter="web">
+                <i class="fas fa-globe"></i>
+                <span>Web Tools</span>
+            </a>
+            <a href="#" class="side-link cat-filter" data-filter="format">
+                <i class="fas fa-indent"></i>
+                <span>Formatters</span>
+            </a>
+            <a href="#" class="side-link cat-filter" data-filter="convert">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Converters</span>
+            </a>
+            <a href="#" class="side-link cat-filter" data-filter="generator">
+                <i class="fas fa-magic"></i>
+                <span>Generators</span>
+            </a>
+        </div>
+
+        <div style="margin-top: auto; padding: 12px; border-top: 1px solid var(--border-color);">
+            <a href="#" class="side-link" id="side-about">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Command Palette Overlay -->
+    <div class="cmd-overlay" id="cmdOverlay">
+        <div class="cmd-palette">
+            <div class="cmd-header">
+                <i class="fas fa-search" style="color: var(--text-muted)"></i>
+                <input type="text" class="cmd-input" id="cmdInput" placeholder="What do you want to do?">
+                <span class="cmd-item-key">ESC to close</span>
+            </div>
+            <div class="cmd-results" id="cmdResults">
+                <!-- Results via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- HOME TAB -->
+        <div id="tab-home" class="tab-content">
+
+            <!-- Dashboard Widgets -->
+            <div class="dashboard-grid">
+                <!-- Widget 1: Scratchpad -->
+                <div class="widget">
+                    <div class="widget-header">
+                        <div class="widget-title"><i class="fas fa-sticky-note" style="color: var(--warning)"></i>
+                            Scratchpad</div>
+                        <span style="font-size: 11px; color: var(--success);">Auto-saved</span>
+                    </div>
+                    <textarea id="notes-area"
+                        placeholder="Type your quick notes here... they are saved automatically."></textarea>
+                </div>
+
+                <!-- Widget 2: Quick Embed -->
+                <div class="widget">
+                    <div class="widget-header">
+                        <div class="widget-title"><i class="fas fa-image" style="color: var(--accent-primary)"></i>
+                            Image to URL</div>
+                        <a href="#" target="_blank"
+                            style="font-size: 11px; color: var(--text-muted); text-decoration: none;">Expand</a>
+                    </div>
+                    <div class="iframe-container">
+                        <iframe src="https://image2url-image2url.hf.space"></iframe>
+                        <div class="iframe-label">External Tool</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Access -->
+            <div class="section-title">
+                <i class="fas fa-bolt"></i> Quick Access
+            </div>
+            <div class="grid-container" id="quick-access-grid">
+                <!-- Populated via JS -->
+            </div>
+
+            <!-- All Tools Preview -->
+            <div class="section-title">
+                <i class="fas fa-th-large"></i> All Tools
+            </div>
+
+            <div class="category-scroll" id="home-categories">
+                <div class="cat-chip active" data-filter="all">All</div>
+                <div class="cat-chip" data-filter="web">Web</div>
+                <div class="cat-chip" data-filter="format">Formatters</div>
+                <div class="cat-chip" data-filter="convert">Converters</div>
+                <div class="cat-chip" data-filter="generator">Generators</div>
+            </div>
+
+            <div class="grid-container" id="tools-grid">
+                <!-- Populated via JS -->
+            </div>
+        </div>
+
+        <!-- FAVORITES TAB -->
+        <div id="tab-favorites" class="tab-content hidden">
+            <div class="section-title"><i class="fas fa-star"></i> Your Favorites</div>
+            <div class="grid-container" id="favorites-grid">
+                <!-- Populated via JS -->
+            </div>
+            <div id="no-favorites" class="empty-state hidden">
+                No favorites added yet. <br>Click the star icon on any tool to add it here.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-target="tab-home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </button>
+        <button class="nav-item" data-target="tab-favorites">
+            <i class="fas fa-star"></i>
+            <span>Favorites</span>
+        </button>
+        <button class="nav-item" id="btn-about">
+            <i class="fas fa-info-circle"></i>
+            <span>About</span>
+        </button>
+    </nav>
+
+    <!-- Modal Container -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Tool Name</h3>
+                <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic Content -->
+            </div>
+            <div class="modal-footer" id="modalFooter">
+                <!-- Dynamic Buttons -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">Action Successful</div>
+
+</body>
+
+</html>

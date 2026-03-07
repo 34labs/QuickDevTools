@@ -1,0 +1,21 @@
+{
+  "name": "DevTools Hub - GitHub Launcher",
+  "short_name": "DevTools Hub",
+  "description": "A comprehensive developer tools hub",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#F46900",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dahcxjdbl/image/upload/v1769351291/48628e5e-a413-4ea5-8fc3-9ad56c0eaecd.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://res.cloudinary.com/dahcxjdbl/image/upload/v1769351291/48628e5e-a413-4ea5-8fc3-9ad56c0eaecd.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
