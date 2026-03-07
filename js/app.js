@@ -2,6 +2,8 @@ import { state, setState } from "./state.js";
 import { loadPlugins } from "./engine/pluginLoader.js";
 import { initDashboard } from "./ui/dashboard.js";
 import { initModal } from "./core/modal.js";
+import { initNavigation } from "./core/navigation.js";
+import { initCommandPalette } from "./core/commandPalette.js";
 import { showToast } from "./core/toast.js";
 
 /**
@@ -12,6 +14,8 @@ async function initApp() {
 
     // 1. Initialize Core UI
     initModal();
+    initNavigation();
+    initCommandPalette();
 
     // 2. Load Plugins
     await loadPlugins();

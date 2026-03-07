@@ -13,5 +13,15 @@
     "tools/hashTool.js",
     "tools/colorTool.js",
     "tools/loremIpsum.js",
-    "tools/webTools.js"
+    "tools/webTools.js",
+    "tools/slugGenerator.js",
+    "tools/smartWordCounter.js",
+    "tools/duplicateLineRemover.js",
+    "tools/textSorter.js",
+    "tools/textDiff.js",
+    "tools/textCounter.js",
+    "tools/whitespaceCleaner.js",
+    "tools/unicodeInspector.js",
+    "tools/unicodeNameLookup.js",
+    "tools/unicodeNormalizer.js"
 ]
