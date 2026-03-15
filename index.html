@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Removed maximum-scale=1.0, user-scalable=no for better accessibility -->
-    
+
     <!-- Primary Meta Tags -->
     <title>QuickDevTools v2 - Free Online Developer Tools Suite</title>
     <meta name="title" content="QuickDevTools v2 - Free Online Developer Tools Suite">
-    <meta name="description" content="A comprehensive suite of free online developer tools. Includes JSON formatters, Base64 encoders, converters, and web utilities. Fast, offline-ready PWA.">
-    <meta name="keywords" content="developer tools, web tools, json formatter, base64 encoder, PWA, online converters, devtools">
+    <meta name="description"
+        content="A comprehensive suite of free online developer tools. Includes JSON formatters, Base64 encoders, converters, and web utilities. Fast, offline-ready PWA.">
+    <meta name="keywords"
+        content="developer tools, web tools, json formatter, base64 encoder, PWA, online converters, devtools">
     <meta name="author" content="QuickDevTools">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://qdt.pages.dev/">
@@ -20,12 +22,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="QuickDevTools">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qdt.pages.dev/">
     <meta property="og:title" content="QuickDevTools v2 - Developer Power Tools">
-    <meta property="og:description" content="A comprehensive suite of free online developer tools. Formatters, Converters, Generators, and more.">
+    <meta property="og:description"
+        content="A comprehensive suite of free online developer tools. Formatters, Converters, Generators, and more.">
     <meta property="og:image" content="https://qdt.pages.dev/images/og-image.png">
 
     <!-- Twitter -->
@@ -59,16 +62,21 @@
     </script>
 
     <!-- PWA Manifest -->
-    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkRldlRvb2xzIEh1YiBQcm8iLAogICJzaG9ydF9uYW1lIjogIkRldlRvb2xzIiwKICAiZGVzY3JpcHRpb24iOiAiQSBjb21wcmVoZW5zaXZlIGRldmVsb3BlciB0b29scyBodWIiLAogICJzdGFydF91cmwiOiAiLiIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzBmMTcyYSIsCiAgInRoZW1lX2NvbG9yIjogIiMzYjgyZjYiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWwlM0NzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgNTEyIDUxMiclM0VwYXRoIGZpbGw9JyUyMzNiODJmNiJkPSdNMjU2IDBDMTE0LjYgMCAwIDExNC42IDAgMjU2czExNC42IDI1NiAyNTYgMjU2IDI1Ni0xMTQuNiAyNTYtMjU2UzM5Ny40IDAgMjU2IDB6bTAgNDU2Yy0xMTAuNSAwLTIwMC04OS41LTIwMC0yMDBTMTQ1LjUgNTYgMjU2IDU2czIwMCA4OS41IDIwMCAyMDAtODkuNSAyMDAtMjAwIDIwMHptMC0zNDBjLTc3LjIgMC0xNDAgNjIuOC0xNDAgMTQwaDI4MGMwLTc3LjItNjIuOC0xNDAtMTQwLTE0MHonLyUzRSUzQy9zdmclM0UiLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9CiAgXQp9">
+    <link rel="manifest"
+        href="data:application/json;base64,ewogICJuYW1lIjogIkRldlRvb2xzIEh1YiBQcm8iLAogICJzaG9ydF9uYW1lIjogIkRldlRvb2xzIiwKICAiZGVzY3JpcHRpb24iOiAiQSBjb21wcmVoZW5zaXZlIGRldmVsb3BlciB0b29scyBodWIiLAogICJzdGFydF91cmwiOiAiLiIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzBmMTcyYSIsCiAgInRoZW1lX2NvbG9yIjogIiMzYjgyZjYiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWwlM0NzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgNTEyIDUxMiclM0VwYXRoIGZpbGw9JyUyMzNiODJmNiJkPSdNMjU2IDBDMTE0LjYgMCAwIDExNC42IDAgMjU2czExNC42IDI1NiAyNTYgMjU2IDI1Ni0xMTQuNiAyNTYtMjU2UzM5Ny40IDAgMjU2IDB6bTAgNDU2Yy0xMTAuNSAwLTIwMC04OS41LTIwMC0yMDBTMTQ1LjUgNTYgMjU2IDU2czIwMCA4OS41IDIwMCAyMDAtODkuNSAyMDAtMjAwIDIwMHptMC0zNDBjLTc3LjIgMC0xNDAgNjIuOC0xNDAgMTQwaDI4MGMwLTc3LjItNjIuOC0xNDAtMTQwLTE0MHonLyUzRSUzQy9zdmclM0UiLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9CiAgXQp9">
 
     <!-- External Resources -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/app.css">
@@ -88,10 +96,15 @@
         </button>
     </div>
 
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
     <!-- Header -->
     <header class="app-header" role="banner">
         <div class="brand">
-            <div class="brand-icon" aria-hidden="true"><i class="fas fa-terminal"></i></div>
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle Navigation">
+                <i class="fas fa-terminal"></i>
+            </button>
             <div class="brand-text">
                 <h1 itemprop="name">QuickDevTools</h1>
                 <span itemprop="description">Power Tools for Devs</span>
@@ -101,12 +114,14 @@
         <div class="header-search">
             <label for="globalSearch" class="visually-hidden">Search Tools</label>
             <i class="fas fa-search search-icon" aria-hidden="true"></i>
-            <input type="search" class="search-input" id="globalSearch" placeholder="Search tools or Ctrl+K..." autocomplete="off">
+            <input type="search" class="search-input" id="globalSearch" placeholder="Search tools or Ctrl+K..."
+                autocomplete="off">
             <span class="cmd-hint" aria-hidden="true">Ctrl+K</span>
         </div>
 
         <div class="header-actions">
-            <button class="btn btn-secondary" id="btn-cmd-palette" title="Open Command Palette" aria-label="Open Command Palette">
+            <button class="btn btn-secondary" id="btn-cmd-palette" title="Open Command Palette"
+                aria-label="Open Command Palette">
                 <i class="fas fa-keyboard" aria-hidden="true"></i>
             </button>
         </div>
@@ -114,14 +129,16 @@
 
     <!-- Sidebar (Desktop) -->
     <aside class="sidebar" role="navigation" aria-label="Main Navigation">
-        <div class="side-nav-group">
+        <div class="side-nav-group"><br><br><br>
             <div class="side-nav-label" id="nav-main-label">Main</div>
             <nav role="tablist" aria-labelledby="nav-main-label">
-                <a href="#home" class="side-link active" role="tab" data-target="tab-home" aria-selected="true" aria-controls="tab-home">
+                <a href="#home" class="side-link active" role="tab" data-target="tab-home" aria-selected="true"
+                    aria-controls="tab-home">
                     <i class="fas fa-home" aria-hidden="true"></i>
                     <span>Dashboard</span>
                 </a>
-                <a href="#favorites" class="side-link" role="tab" data-target="tab-favorites" aria-selected="false" aria-controls="tab-favorites">
+                <a href="#favorites" class="side-link" role="tab" data-target="tab-favorites" aria-selected="false"
+                    aria-controls="tab-favorites">
                     <i class="fas fa-star" aria-hidden="true"></i>
                     <span>Favorites</span>
                 </a>
@@ -129,42 +146,60 @@
         </div>
 
         <div class="side-nav-group">
-            <div class="side-nav-label" id="nav-cat-label">Categories</div>
+            <div class="side-nav-label" id="nav-cat-label">Developer Resources</div>
             <nav aria-labelledby="nav-cat-label">
-                <button class="side-link cat-filter" data-filter="web">
-                    <i class="fas fa-globe" aria-hidden="true"></i>
-                    <span>Web Tools</span>
-                </button>
-                <button class="side-link cat-filter" data-filter="format">
-                    <i class="fas fa-indent" aria-hidden="true"></i>
-                    <span>Formatters</span>
-                </button>
-                <button class="side-link cat-filter" data-filter="convert">
-                    <i class="fas fa-exchange-alt" aria-hidden="true"></i>
-                    <span>Converters</span>
-                </button>
-                <button class="side-link cat-filter" data-filter="generator">
-                    <i class="fas fa-magic" aria-hidden="true"></i>
-                    <span>Generators</span>
-                </button>
+                <a href="https://github.com" target="_blank" class="side-link">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://developer.mozilla.org" target="_blank" class="side-link">
+                    <i class="fab fa-firefox" aria-hidden="true"></i>
+                    <span>MDN Docs</span>
+                </a>
+                <a href="https://stackoverflow.com" target="_blank" class="side-link">
+                    <i class="fab fa-stack-overflow" aria-hidden="true"></i>
+                    <span>Stack Overflow</span>
+                </a>
+                <a href="https://codepen.io" target="_blank" class="side-link">
+                    <i class="fab fa-codepen" aria-hidden="true"></i>
+                    <span>CodePen</span>
+                </a>
+                <a href="https://www.npmjs.com" target="_blank" class="side-link">
+                    <i class="fab fa-npm" aria-hidden="true"></i>
+                    <span>NPM Registry</span>
+                </a>
+                <a href="https://fonts.google.com" target="_blank" class="side-link">
+                    <i class="fas fa-font" aria-hidden="true"></i>
+                    <span>Google Fonts</span>
+                </a>
+                <a href="https://chat.openai.com" target="_blank" class="side-link">
+                    <i class="fas fa-robot" aria-hidden="true"></i>
+                    <span>ChatGPT</span>
+                </a>
+                <a href="https://www.figma.com" target="_blank" class="side-link">
+                    <i class="fab fa-figma" aria-hidden="true"></i>
+                    <span>Figma</span>
+                </a>
             </nav>
         </div>
 
-        <div class="sidebar-footer">
-            <button class="side-link" id="side-about">
-                <i class="fas fa-info-circle" aria-hidden="true"></i>
+        <div style="margin-top: auto; padding: 12px; border-top: 1px solid var(--border-color);">
+            <a href="#" class="side-link" id="side-about">
+                <i class="fas fa-info-circle"></i>
                 <span>About</span>
-            </button>
-        </div>
+            </a>
+        </div><br><br><br>
     </aside>
 
     <!-- Command Palette Overlay -->
-    <div class="cmd-overlay" id="cmdOverlay" role="dialog" aria-modal="true" aria-label="Search and Command Palette" hidden>
+    <div class="cmd-overlay" id="cmdOverlay" role="dialog" aria-modal="true" aria-label="Search and Command Palette"
+        hidden>
         <div class="cmd-palette">
             <div class="cmd-header">
                 <i class="fas fa-search" style="color: var(--text-muted)" aria-hidden="true"></i>
                 <label for="cmdInput" class="visually-hidden">Search Command</label>
-                <input type="text" class="cmd-input" id="cmdInput" placeholder="What do you want to do?" aria-autocomplete="list">
+                <input type="text" class="cmd-input" id="cmdInput" placeholder="What do you want to do?"
+                    aria-autocomplete="list">
                 <span class="cmd-item-key">ESC to close</span>
             </div>
             <div class="cmd-results" id="cmdResults" role="listbox">
@@ -178,10 +213,10 @@
 
         <!-- HOME TAB -->
         <section id="tab-home" class="tab-content" role="tabpanel" aria-labelledby="link-home">
-            
+
             <!-- Dashboard Widgets -->
             <div class="dashboard-grid">
-                
+
                 <!-- Widget 1: Scratchpad -->
                 <article class="widget">
                     <div class="widget-header">
@@ -192,7 +227,8 @@
                         <span class="widget-status" style="color: var(--success);">Auto-saved</span>
                     </div>
                     <label for="notes-area" class="visually-hidden">Quick Notes</label>
-                    <textarea id="notes-area" placeholder="Type your quick notes here... they are saved automatically."></textarea>
+                    <textarea id="notes-area"
+                        placeholder="Type your quick notes here... they are saved automatically."></textarea>
                 </article>
 
                 <!-- Widget 2: Quick Embed -->
@@ -202,17 +238,15 @@
                             <i class="fas fa-image" style="color: var(--accent-primary)" aria-hidden="true"></i>
                             Image to URL
                         </div>
-                        <a href="https://image2url-image2url.hf.space" target="_blank" rel="noopener noreferrer" class="widget-expand-link" aria-label="Open Image to URL tool in new tab">
+                        <a href="https://image2url-image2url.hf.space" target="_blank" rel="noopener noreferrer"
+                            class="widget-expand-link" aria-label="Open Image to URL tool in new tab">
                             Expand
                         </a>
                     </div>
                     <div class="iframe-container">
                         <!-- Added title and loading="lazy" for SEO/Performance -->
-                        <iframe 
-                            src="https://image2url-image2url.hf.space" 
-                            title="Image to URL Converter Tool" 
-                            loading="lazy"
-                            sandbox="allow-scripts allow-same-origin">
+                        <iframe src="https://image2url-image2url.hf.space" title="Image to URL Converter Tool"
+                            loading="lazy" sandbox="allow-scripts allow-same-origin">
                         </iframe>
                         <div class="iframe-label">External Tool</div>
                     </div>
@@ -240,7 +274,8 @@
                     <button class="cat-chip" data-filter="web" role="tab" aria-selected="false">Web</button>
                     <button class="cat-chip" data-filter="format" role="tab" aria-selected="false">Formatters</button>
                     <button class="cat-chip" data-filter="convert" role="tab" aria-selected="false">Converters</button>
-                    <button class="cat-chip" data-filter="generator" role="tab" aria-selected="false">Generators</button>
+                    <button class="cat-chip" data-filter="generator" role="tab"
+                        aria-selected="false">Generators</button>
                 </div>
 
                 <div class="grid-container" id="tools-grid" role="list">
@@ -283,7 +318,8 @@
         <div class="modal">
             <div class="modal-header">
                 <h3 class="modal-title" id="modalTitle">Tool Name</h3>
-                <button class="modal-close" id="modalClose" aria-label="Close Modal"><i class="fas fa-times" aria-hidden="true"></i></button>
+                <button class="modal-close" id="modalClose" aria-label="Close Modal"><i class="fas fa-times"
+                        aria-hidden="true"></i></button>
             </div>
             <div class="modal-body" id="modalBody">
                 <!-- Dynamic Content -->
@@ -298,4 +334,5 @@
     <div class="toast" id="toast" role="status" aria-live="polite">Action Successful</div>
 
 </body>
+
 </html>

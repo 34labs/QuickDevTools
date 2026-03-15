@@ -10,7 +10,10 @@ const elements = {
     links: document.querySelectorAll('.side-link, .nav-item'),
     catFilters: document.querySelectorAll('.cat-filter'),
     bottomAbout: document.getElementById('btn-about'),
-    sideAbout: document.getElementById('side-about')
+    sideAbout: document.getElementById('side-about'),
+    sidebarToggle: document.getElementById('sidebarToggle'),
+    sidebarOverlay: document.getElementById('sidebarOverlay'),
+    sidebar: document.querySelector('.sidebar')
 };
 
 /**
@@ -87,21 +90,55 @@ export function initNavigation() {
         if (btn) {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                // For now, toggle About modal if we had one, or just show a toast
-                // The user's HTML shows these as buttons/links.
-                // Reusing the modal system for a simple "About"
+                // Close sidebar if on mobile
+                if (window.innerWidth < 1024) {
+                    elements.sidebar.classList.remove('open');
+                    elements.sidebarOverlay.classList.remove('open');
+                }
+                
                 import("./modal.js").then(m => {
                     m.showModal(
                         "About QuickDevTools",
-                        `<div style="line-height: 1.6;">
+                        `<div style="line-height: 1.6; text-align: center;">
                             <p><strong>QuickDevTools v2</strong></p>
                             <p>A comprehensive collection of essential tools for developers, refactored for performance and modularity.</p>
                             <p style="margin-top: 10px; font-size: 13px; color: var(--text-muted);">Built with ❤️ for the Developer Community.</p>
+                            <div style="margin-top: 15px;">
+                                <a href='https://submito.net' target='_blank' title='Listed on Submito'>
+                                    <img src='https://submito.net/badge/listed-dark.svg' alt='Listed on Submito' style="height: 32px;" />
+                                </a>
+                            </div>
                         </div>`,
                         `<button class="btn btn-primary" onclick="this.closest('.modal-overlay').classList.remove('open')">Close</button>`
                     );
                 });
             });
         }
+    });
+
+    // Sidebar Toggle (Mobile)
+    if (elements.sidebarToggle) {
+        elements.sidebarToggle.addEventListener('click', () => {
+            elements.sidebar.classList.toggle('open');
+            elements.sidebarOverlay.classList.toggle('open');
+        });
+    }
+
+    // Close Sidebar on Overlay Click
+    if (elements.sidebarOverlay) {
+        elements.sidebarOverlay.addEventListener('click', () => {
+            elements.sidebar.classList.remove('open');
+            elements.sidebarOverlay.classList.remove('open');
+        });
+    }
+
+    // Close Sidebar on link click (Mobile)
+    elements.links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 1024) {
+                elements.sidebar.classList.remove('open');
+                elements.sidebarOverlay.classList.remove('open');
+            }
+        });
     });
 }
