@@ -5,6 +5,8 @@ export const state = {
     favorites: JSON.parse(localStorage.getItem('devtools_favorites')) || [],
     notes: localStorage.getItem('devtools_notes') || '',
     recent: JSON.parse(localStorage.getItem('devtools_recent')) || [],
+    collapsedCategories: JSON.parse(localStorage.getItem('qdt_collapsed')) || [],
+    customShortcuts: JSON.parse(localStorage.getItem('devtools_shortcuts')) || [],
     activeTab: 'tab-home'
 };
 
